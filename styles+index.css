@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #9400D3; /* Màu nền đặc trưng của Spotify */
     color: white;
+    height: 2000px;
 }
 
 header {
@@ -30,15 +31,25 @@ nav a {
     text-align: center;
     padding: 100px 20px;
     background-color: #121212;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .hero h1 {
     font-size: 60px;
+    text-align: left;
+    justify-content: center;
+    line-height: 2cm;
 }
 
 .hero p {
     font-size: 20px;
     margin: 30px 0;
+    text-align: left;
+    line-height: 7mm;
+    width: fit-content;
 }
 
 .button1 {
@@ -50,6 +61,7 @@ nav a {
     cursor: pointer;
     border-radius: 30px;
     margin: 0px 5px;
+    
 }
 
 .button2 {
