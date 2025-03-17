@@ -58,11 +58,13 @@ body {
 .form-container {
     background-color: #4B004B; /* Dark purple */
     color: #FFFFFF; /* White text */
-    border-radius: 10px; /* Optional styling for rounded corners */
-    padding: 30px; /* Increased padding */
-    max-width: 450px; /* Increased max-width */
+    border-radius: 12px; /* Updated border-radius */
+    padding: 25px; /* Updated padding */
+    width: 491px; /* Set width */
+    height: 404px; /* Set height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-left: 50px; /* Adjust as needed to move it to the right */
 }
 
 /* Form header */
