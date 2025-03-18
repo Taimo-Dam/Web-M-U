@@ -152,7 +152,9 @@ nav a {
     cursor: pointer;
     border-radius: 30px;
     margin: 0px 5px;
-    margin-right: 1500px;
+    /*margin-right: 1500px;
+    a phong làm ẩu r ba lỗi mẹ cái khung chính r nên a phong tìm cách fix nhé 
+    */
 }
 
 footer {
