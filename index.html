@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ M&U</title>
     <link rel="stylesheet" href="styles+index.css"> <!-- Liên kết tới tệp CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -22,6 +23,92 @@
             <a href="dangnhap.html">Login</a>
             <a href="dangky.html" > <button class="button">Sign up</button></a>        
         </nav>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <div class="logo_name">Me and You</div>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav_list">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-home' ></i>
+                        <span class="link_name">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-compass'></i>
+                        <span class="link_name">Discover</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-album' ></i>
+                        <span class="link_name">Albums</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-user-circle'></i>
+                        <span class="link_name">Artists</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-time' ></i>
+                        <span class="link_name">Recently Added</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-play-circle'></i>
+                        <span class="link_name">Most Play</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-heart-square'></i>
+                        <span class="link_name">Your Favorites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-playlist'></i>
+                        <span class="link_name">Your Playlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-add-to-queue' ></i>
+                        <span class="link_name">Add Playlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog' ></i>
+                        <span class="link_name">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out' ></i>
+                        <span class="link_name">Log Out</span>
+                    </a>
+                </li>   
+            </ul>
+        </div>
+
+        <script>
+            let btn = document.querySelector("#btn");
+            let sidebar = document.querySelector(".sidebar");
+
+            btn.onclick = function(){
+                sidebar.classList.toggle("active");
+            }
+        </script>
+
     </header>
 
     <!-- Hero Section -->
