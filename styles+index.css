@@ -40,10 +40,27 @@ body {
 
 header {
     background-color: #1e1e1e;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+ .header-left {
+            font-size: 24px;
+            color: white;
+            font-weight: bold; ;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Header Right */
+     .header-right {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    padding: 10px;
 }
 
 .logo {
