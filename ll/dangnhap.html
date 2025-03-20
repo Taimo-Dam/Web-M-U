@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="stylesdangky+dangnhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <h1>Join Our Platform</h1>
+            <p>You can be one of the <span class="highlight">members</span> of our platform by just adding some necessary information. If you already have an account on our website, you can just hit the <a href="dangnhap.html" class="login-link">Login button</a>.</p>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <a href="dangky.html" class="form-header-link">Sign Up</a>
+                <a href="dangnhap.html" class="form-header-link active">Login</a>
+            </div>
+            <form action="login.php" method="post">
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                
+                <button type="submit" class="form-button">Login</button>
+            </form>
+            <div class="separator">Or</div>
+            <button class="google-button">
+                <img src="google.png" class="google-icon" width="20px" height="20px"/>
+                Login With Google
+            </button>
+        </div>
+    </div>
+</body>
+</html>

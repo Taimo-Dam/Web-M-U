@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="stylesdangky+dangnhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <h1>Join Our Platform</h1>
+            <p>You can be one of the <span class="highlight">members</span> of our platform by just adding some necessary information. If you already have an account on our website, you can just hit the <a href="dangnhap.html" class="login-link">Login button</a>.</p>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <a href="dangky.html" class="form-header-link active">Sign Up</a>
+                <a href="dangnhap.html" class="form-header-link">Login</a>
+            </div>
+            <form id="registrationForm" onsubmit="return validateRegistration(event)">
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Enter Your Name" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="number" name="number" placeholder="Enter Your Number" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter Your E-Mail" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" required>
+                </div>
+                
+                <button type="submit" class="form-button">Sign Up</button>
+            </form>
+            <div class="separator">Or</div>
+            <button class="google-button">
+                <img src="google.png" class="google-icon"  width="20px" height="20px" />
+                Sign Up With Google
+            </button>
+        </div>
+    </div>
+</body>
+</html>
