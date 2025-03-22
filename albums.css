@@ -1,69 +1,128 @@
-/*body*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+/* albums.css */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, rgb(0, 200, 255), rgb(109, 76, 76));
-}
-
-/*header*/
-.header {
     color: #fff;
-    padding: 1rem 0;
+    background: linear-gradient(to right, rgb(0, 200, 255), #121212);
 }
 
-.header .container {
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Header Styling */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
 }
 
-.back a{
-    text-decoration: none;
+.back-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-right button {
+    background: none;
+    border: 1px solid #555;
     color: #fff;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-.back a:hover{
-    color: rgb(109, 76, 76);
-}
-
-.nav ul {
-    list-style: none;
+/* Playlist Info Section */
+.playlist-info {
     display: flex;
+    align-items: center;
+    gap: 80px;
+    margin: 0px 0;
+    padding: 50px;
 }
 
-.nav ul li {
-    margin: 0 15px;
+.playlist-info img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
 }
 
-.nav ul li a {
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+.details h1 {
+    font-size: 38px;
+    margin-top: 0px;
+}
+
+.details .highlight {
+    color: #e846ba; 
+}
+
+.details p {
+    font-size: medium;
+    margin: 10px 0;
+}
+
+.play-all {
+    margin-top: 200px;
+    background-color: #e846ba;
     color: #fff;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.nav ul li a:hover {
-    color: rgb(0, 200, 255);
-}
-
-.icon img{
-    width: 50px; /* Chiều rộng của hình ảnh */
-    height: 50px;
-    border-radius: 45%;
-}
-
-
-
-/*footer*/
-footer {
-    background-color: #181818;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
+/* Songs Table */
+table {
     width: 100%;
-    bottom: 0;
+    border-collapse: collapse;/*kết hợp 2 đường viền của 2 ô cạnh nhau*/
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
+thead th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr td div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+tbody tr img{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+tbody tr td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.musicname {
+    text-align: right;
+}
+
+tbody tr td:last-child {
+    text-align: center;
+}
+
