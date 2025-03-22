@@ -4,72 +4,22 @@ body {
     color: white;
     margin: 0;
 }
-.search-container {
-    position: relative; /* Đặt vị trí tương đối  */
-    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    margin-top: 10px; /* Khoảng cách phía trên */
-}
-
-.search-input {
-    width: 300px; /* Độ rộng của input */
-    padding: 10px 20px; /* Padding bên trong */
-    border-radius: 25px; /* Bo tròn các góc */
-    border: none; /* Không có viền */
-    background-color: #333; /* Màu nền tối cho input */
-    color: #fff; /* Màu chữ trắng */
-    font-size: 16px; /* Kích thước chữ */
-    padding-left: 40px; /* Khoảng cách bên trái để có chỗ cho biểu tượng */
-    margin-right: 450px; /* Khoảng cách bên phải */
-}
-
-.search-input::placeholder {
-    color: #bbb; /* Placeholder text color */
-}
-
-.search-icon {
-    position: absolute; /* Đặt vị trí tuyệt đối để có thể đặt ở vị trí cụ thể */
-    left: 10px; /* Khoảng cách từ bên trái */
-    color: #bbb; /* Màu của biểu tượng */
-    font-size: 20px; /* Kích thước biểu tượng */
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #1f1f1f;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold; /* Chữ đậm */
-}
-
 nav ul {
     list-style-type: none; /* ko có dấu đầu dòng*/
     display: flex;
     gap: 20px; /* Khoảng cách giữa các mục menu */
 }
-
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none; 
-}
-
 main {
-    padding: 20px;
+    padding: 10px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 h2 {
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
 .genre-container,
@@ -95,46 +45,6 @@ h2 {
     flex: 1 1 calc(33% - 20px);
 }
 
-.footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 5px;
-}
-
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-}
 
 .gradient-text {
     background: linear-gradient(to right, #ff69ff, #0E9EEF);
@@ -145,6 +55,72 @@ h2 {
     font-weight: bold;
 }
 
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.genre-container {
+    display: flex; 
+    flex-wrap: wrap; /* genre xuống dòng nếu không đủ chỗ */
+    justify-content: space-around; /* căn giữa  */
+    background-color: #0a0801; 
+}
+
+.genre {
+    flex: 1 1 100px; /* Đặt kích thước tối thiểu cho mỗi genre */
+    margin: 10px; /* Khoảng cách giữa các genre */
+    border: 1px solid #eee9e9; /* Đường viền cho mỗi genre */
+    border-radius: 8px; /* gọt tròn các góc */
+    overflow: hidden; /* ẩn phần thừa */
+    transition: transform 0.3s; /*chuyển động mượt mà nha*/
+}
+
+.genre:hover {
+    transform: scale(1.05); /* đọng đậy khi click */
+}
+
+.genre img {
+    width: 100%; 
+    height: auto; /* giữ tl hình ảnh */
+}
+.playlist-container {
+    display: flex;
+    flex-direction: row ; /* Sắp xếp theo chiều dọc */
+    align-items: center; /* Căn giữa các playlist */
+    padding: 20px;
+    background-color: #f0f0f0; /* Màu nền cho container */
+}
+
+/* Định dạng cho mỗi playlist */
+.playlist {
+    flex: 1 1 100px; 
+    margin: 10px; 
+    border: 1px solid #eee9e9;
+    border-radius: 8px; 
+    overflow: hidden; 
+
+}
+
+/* định dạng hình ảnh playlist */
+.playlist img {
+    width: 100%; /*  rộng 100%  */
+    height: auto;
+}
+
+/* Định dạng cho tiêu đề playlist */
+.playlist::before {
+    content: attr(class); /* lấy tên playlist từ class */
+    position: absolute; /*tiêu đề*/
+    top: 10px; /* cách trên xuống */
+    left: 50%; /* căn giữa theo chiều ngang */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* mờ tiêu đề */
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; /*bo tròn góc*/
+    font-size: 16px; 
+}
 .social-icons a {
     color: white;
     margin: 0 10px;
