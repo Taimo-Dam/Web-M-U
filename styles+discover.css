@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a; 
+    color: #ffffff;
     margin: 0;
+    padding: 0;
 }
 nav ul {
     list-style-type: none; /* ko có dấu đầu dòng*/
@@ -15,11 +16,6 @@ main {
 
 section {
     margin-bottom: 30px;
-}
-
-h2 {
-    border-bottom: 1px solid #444;
-    padding-bottom: 10px;
 }
 
 .genre-container,
@@ -45,84 +41,195 @@ h2 {
     flex: 1 1 calc(33% - 20px);
 }
 
-
-.gradient-text {
-    background: linear-gradient(to right, #ff69ff, #0E9EEF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 24px;
-    font-weight: bold;
+.music-genres {
+    background-color: #282c34; /* Màu nền tối */
+    padding: 30px; /* Khoảng cách bên trong */
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
 }
 
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 20px;
+.music-genres h2 {
+    font-size: 28px;
+    color: #287ecf; /* Màu chữ sáng */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng tiêu đề */
 }
+
 .genre-container {
-    display: flex; 
-    flex-wrap: wrap; /* genre xuống dòng nếu không đủ chỗ */
-    justify-content: space-around; /* căn giữa  */
-    background-color: #0a0801; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 190px; /* Khoảng cách giữa các thể loại */
 }
 
 .genre {
-    flex: 1 1 100px; /* Đặt kích thước tối thiểu cho mỗi genre */
-    margin: 10px; /* Khoảng cách giữa các genre */
-    border: 1px solid #eee9e9; /* Đường viền cho mỗi genre */
-    border-radius: 8px; /* gọt tròn các góc */
-    overflow: hidden; /* ẩn phần thừa */
-    transition: transform 0.3s; /*chuyển động mượt mà nha*/
+    flex: 0 0 auto; /* Không cho phép co giãn */
+    width: 160px; /* Chiều rộng cố định */
+    text-align: center; /* Căn giữa nội dung */
+    background-color: #3a3f47; /* Màu nền tối cho từng nghệ sĩ */
+    border-radius: 10px; /* Bo góc */
+    padding: 15px; /* Khoảng cách bên trong */
+    position: relative; /* Để sử dụng cho hiệu ứng */
+    overflow: hidden; /* Ẩn phần thừa */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */ 
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7)); /* Gradient nền */
 }
 
 .genre:hover {
-    transform: scale(1.05); /* đọng đậy khi click */
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7); /* Bóng đổ khi hover */
 }
 
 .genre img {
+    border-radius: 8px; 
     width: 100%; 
-    height: auto; /* giữ tl hình ảnh */
+    height: auto; 
+    transition: transform 0.3s;
 }
+
+.genre:hover img {
+    transform: scale(1.1);
+}
+
+.genre::after {
+    content: attr(data-genre);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff; /* Màu chữ sáng */
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1.5em; /* Kích thước chữ lớn hơn */
+    font-weight: bold; /* Chữ đậm */
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.genre:hover::after {
+    opacity: 1; /* Hiện chữ khi hover */
+}
+
+.mood-playlist {
+    background-color: #282c34; /* Màu nền tối */
+    padding: 30px; /* Khoảng cách bên trong */
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+.mood-playlist h2 {
+    font-size: 28px;
+    color: #28cf73; /* Màu chữ sáng */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng tiêu đề */
+}
+
 .playlist-container {
     display: flex;
-    flex-direction: row ; /* Sắp xếp theo chiều dọc */
-    align-items: center; /* Căn giữa các playlist */
-    padding: 20px;
-    background-color: #f0f0f0; /* Màu nền cho container */
+    justify-content: center;
+    gap: 30px; /* Khoảng cách giữa các playlist */
+    flex-wrap: wrap; /* Cho phép các playlist xuống dòng khi không đủ chỗ */
 }
 
-/* Định dạng cho mỗi playlist */
 .playlist {
-    flex: 1 1 100px; 
-    margin: 10px; 
-    border: 1px solid #eee9e9;
-    border-radius: 8px; 
-    overflow: hidden; 
 
+     flex: 0 0 auto; /* Không cho phép co giãn */
+    width: 160px; /* Chiều rộng cố định */
+    text-align: center; /* Căn giữa nội dung */
+    background-color: #3a3f47; /* Màu nền tối cho từng nghệ sĩ */
+    border-radius: 10px; /* Bo góc */
+    padding: 15px; /* Khoảng cách bên trong */
+    position: relative; /* Để sử dụng cho hiệu ứng */
+    overflow: hidden; /* Ẩn phần thừa */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
 }
 
-/* định dạng hình ảnh playlist */
+.playlist:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 8px 30px rgba(255, 64, 129, 0.5); /* Hiệu ứng bóng nổi bật khi hover */
+}
+
 .playlist img {
-    width: 100%; /*  rộng 100%  */
-    height: auto;
+    width: 100%;
+    height: auto; /* Đảm bảo hình ảnh không bị méo */
+    display: block; /* Loại bỏ khoảng trắng bên dưới hình ảnh */
+    transition: transform 0.3s; /* Hiệu ứng chuyển động cho hình ảnh */
 }
 
-/* Định dạng cho tiêu đề playlist */
-.playlist::before {
-    content: attr(class); /* lấy tên playlist từ class */
-    position: absolute; /*tiêu đề*/
-    top: 10px; /* cách trên xuống */
-    left: 50%; /* căn giữa theo chiều ngang */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* mờ tiêu đề */
-    color: white;
-    padding: 5px 10px; 
-    border-radius: 5px; /*bo tròn góc*/
-    font-size: 16px; 
+.playlist:hover img {
+    transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+.playlist::after {
+    content: attr(data-title); /* Hiển thị tên playlist */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.5em; /* Kích thước chữ lớn hơn */
+    transition: opacity 0.3s;
+    
+}
+
+.playlist:hover::after {
+    opacity: 1; /* Hiện tên playlist khi hover */
 }
 .social-icons a {
     color: white;
     margin: 0 10px;
     font-size: 20px;
+}
+/* Đặt nền cho toàn bộ phần */
+.popular-artists {
+    background-color: #282c34; /* Màu nền tối */
+    padding: 30px; /* Khoảng cách bên trong */
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+/* Định dạng tiêu đề */
+.popular-artists h2 {
+    font-size: 28px; /* Kích thước chữ lớn hơn */
+    color: #d56e13; /* Màu chữ sáng */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Container chứa các nghệ sĩ */
+.artist-container {
+    display: flex; /* Sử dụng flexbox để sắp xếp */
+    gap: 120px; /* Khoảng cách giữa các nghệ sĩ */
+    overflow-x: auto; /* Cuộn ngang nếu cần */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+/* Định dạng từng nghệ sĩ */
+.artist {
+    flex: 0 0 auto; 
+    width: 160px; 
+    text-align: center; 
+    background-color: #3a3f47; 
+    border-radius: 10px; 
+    padding: 15px; 
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng di chuột*/
+.artist:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* đổ bóng*/
+}
+
+/* Định dạng hình ảnh */
+.artist img {
+    border-radius: 8px; 
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.3s; 
+}
+.artist:hover img {
+    transform: scale(1.1);
 }
